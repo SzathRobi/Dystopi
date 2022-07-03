@@ -94,22 +94,22 @@ function GameMechanism() {
 
   const gearImageStyle = {
     height: `${containerheight}px`,
-    left: `-${xCoord + 8}px`,
+    left: isMobile ? `-${xCoord}px` : `-${xCoord + 8}px`,
     bottom: isMobile ? `-${cardHeight * 3}px` : '-3px',
   };
   const fightImageStyle = {
     height: `${containerheight}px`,
-    left: isMobile ? `-${xCoord + 8}px` : `-${xCoord + cardWidth + 8}px`,
+    left: isMobile ? `-${xCoord}px` : `-${xCoord + cardWidth + 8}px`,
     bottom: isMobile ? `-${cardHeight * 2}px` : '-3px',
   };
   const earnImageStyle = {
     height: `${containerheight}px`,
-    left: isMobile ? `-${xCoord + 8}px` : `-${xCoord + cardWidth * 2 + 8}px`,
+    left: isMobile ? `-${xCoord}px` : `-${xCoord + cardWidth * 2 + 8}px`,
     bottom: isMobile ? `-${cardHeight}px` : '-3px',
   };
   const repeatImageStyle = {
     height: `${containerheight}px`,
-    left: isMobile ? `-${xCoord + 8}px` : `-${xCoord + cardWidth * 3 + 8}px`,
+    left: isMobile ? `-${xCoord}px` : `-${xCoord + cardWidth * 3 + 8}px`,
   };
 
   return (
@@ -197,6 +197,7 @@ function GameMechanism() {
                   >
                     GEAR
                   </h3>
+                  <p>Gear up your hero, restock with supply</p>
                 </div>
                 <div className={styles.card}>
                   <img
@@ -225,6 +226,7 @@ function GameMechanism() {
                   >
                     FIGHT
                   </h3>
+                  <p>Gear up your hero, restock with supply</p>
                 </div>
                 <div className={styles.card}>
                   <img
@@ -253,6 +255,7 @@ function GameMechanism() {
                   >
                     EARN
                   </h3>
+                  <p>Gear up your hero, restock with supply</p>
                 </div>
                 <div className={styles.card}>
                   <img
@@ -269,6 +272,7 @@ function GameMechanism() {
                   >
                     REPEAT
                   </h3>
+                  <p>Gear up your hero, restock with supply</p>
                 </div>
               </div>
             </div>
